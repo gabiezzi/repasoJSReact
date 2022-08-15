@@ -1,0 +1,42 @@
+//DESESTRUCTURACION - ASIGNACION DESESTRUCTURANTE
+
+const persona = {
+    nombre: 'Tony',
+    edad: 45,
+    clave: 'IronMan',
+    //rango: 'Soldado'
+};
+
+// const {nombre} = persona;
+
+// const {nombre:nombre2} = persona; en caso de que ya exista variable nombre
+
+
+const { edad, clave, nombre } = persona;
+
+
+// console.log(nombre);
+// console.log(edad);
+// console.log(clave);
+
+// console.log(persona.edad); Forma tediosa y larga de acceder a los atributos de mi objeto
+// console.log(persona.clave);
+
+const useContext = ({ nombre, edad, rango = 'Capitan' }) => {
+    //console.log(nombre,edad,rango);
+
+    return{
+        nombreClave: clave,
+        anios: edad
+    }
+
+};
+
+
+const {nombreClave, anios} = useContext( persona );
+
+
+console.log(nombreClave);
+console.log(anios);
+
+//console.log(avenger);
